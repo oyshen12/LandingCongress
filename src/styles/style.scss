@@ -1,0 +1,95 @@
+@import './variables';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  word-break: break-word;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+body {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.container-wrapper {
+  width: 1150px;
+  margin: 0 auto;
+
+  @media (max-width: 1264px) {
+    width: 880px;
+  }
+  @media (max-width: 960px) {
+    width: 546px;
+  }
+  @media (max-width: 600px) {
+    width: 100%;
+    padding: 0 21px;
+  }
+}
+
+.v-application {
+  line-height: 19px;
+}
+
+input {
+  min-height: auto !important;
+
+  & input::placeholder {
+    color: black !important;
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.text24 {
+  font-size: 24px;
+  line-height: 28px;
+
+  @media (max-width: 960px) {
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.dash {
+  height: 2px;
+  width: 44px;
+  background-color: $mainColor;
+
+  @media (max-width: 600px) {
+    width: 25px;
+  }
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  background: grey;
+}
+
+.router-link {
+  color: inherit !important;
+  text-decoration: none;
+}

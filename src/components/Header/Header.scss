@@ -1,0 +1,126 @@
+.header {
+  width: 100%;
+  height: 85px;
+  background: #e7ecf3;
+  display: flex;
+  align-items: center;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    &-nav {
+      display: flex;
+      align-items: center;
+
+      &-item {
+        text-transform: uppercase;
+        font-weight: 700;
+        cursor: pointer;
+        display: inline-block;
+        transition: all 0.3s ease-in-out;
+
+        @media (max-width: 960px) {
+          display: none;
+        }
+
+        &:hover {
+          color: $mainColor;
+        }
+
+        &::after {
+          content: '';
+          width: 0;
+          height: 1px;
+          display: block;
+          background: $mainColor;
+          transition: all 0.3s ease-in-out;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+
+        & + & {
+          margin-left: 39px;
+
+          @media (max-width: 1264px) {
+            margin-left: 17px;
+          }
+        }
+      }
+
+      &-user {
+        text-transform: uppercase;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-admin {
+          margin-left: 20px;
+        }
+
+        &-exit {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+        }
+      }
+
+      &-mobile {
+        display: none;
+        position: relative;
+        z-index: 10;
+
+        @media (max-width: 960px) {
+          display: block;
+        }
+
+        &-img {
+          color: black !important;
+          font-size: 44px;
+        }
+
+        &-menu {
+          position: absolute;
+          top: 52px;
+          width: 264px;
+          height: 259px;
+          background: #FFFFFF;
+          z-index: 10;
+          padding: 15px 0;
+
+          &-item {
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            height: 46px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding-left: 25px;
+          }
+        }
+
+        &-wrap {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: 5;
+        }
+
+      }
+    }
+  }
+}
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}

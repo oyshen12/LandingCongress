@@ -1,0 +1,146 @@
+.congress {
+  margin-top: 50px;
+  padding-bottom: 39px;
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-text {
+      margin: 0 14px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+
+    @media (max-width: 960px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 22px 32px;
+      width: fit-content;
+      margin: 40px auto 0 auto;
+    }
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+
+    &-button {
+      width: 244px;
+
+      @media (max-width: 1264px) {
+        width: 197px;
+      }
+
+      &.active {
+        border: 2px solid #B4B4B4 !important;
+        color: #B4B4B4 !important;
+
+        &:hover {
+          background-color: white !important;
+        }
+      }
+    }
+  }
+
+  &__table {
+    margin-top: 51px;
+
+    @media (max-width: 600px) {
+      display: none;
+    }
+
+    &-row {
+      display: flex;
+      border-top: 1px solid #B4B4B4;
+      padding: 25px 0;
+
+      @media (max-width: 600px) {
+        flex-direction: column;
+        padding: 19px 0;
+      }
+
+      &:last-child {
+        border-bottom: 1px solid #B4B4B4;
+      }
+
+      &-time {
+        font-size: 36px;
+        line-height: 42px;
+        color: #808080;
+        width: 109px;
+        margin-right: 43px;
+
+        @media (max-width: 1264px) {
+          margin-right: 35px;
+        }
+      }
+
+      &-wrap {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        @media (max-width: 960px) {
+          flex-direction: column;
+          width: 414px;
+        }
+      }
+
+      &-text {
+        width: 665px;
+
+        @media (max-width: 1264px) {
+          width: 483px;
+        }
+        @media (max-width: 960px) {
+          width: 100%;
+        }
+
+        &.speaker {
+          color: #FE3E2F;
+        }
+      }
+
+      &-info {
+        display: flex;
+
+        @media (max-width: 960px) {
+          justify-content: space-between;
+          margin-top: 13px;
+        }
+
+        &-author {
+          width: 139px;
+
+          @media (max-width: 1264px) {
+            width: 103px;
+          }
+          @media (max-width: 960px) {
+            width: auto;
+          }
+        }
+
+        &-place {
+          width: 145px;
+
+          @media (max-width: 960px) {
+            width: auto;
+          }
+        }
+      }
+    }
+
+    &-mobile {
+      display: none;
+      margin-top: 28px;
+
+      @media (max-width: 600px) {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+.coupons {
+  padding-top: 34px;
+  background-image: url("../../assets/Coupons/background.jpg");
+  background-size: cover;
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-text {
+      margin: 0 13px;
+    }
+  }
+
+  &__images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 22px;
+
+    @media (max-width: 1264px) {
+      justify-content: space-around;
+    }
+
+    &-image {
+      width: 368px;
+      height: 215px;
+      cursor: pointer;
+      background-size: contain;
+      position: relative;
+
+      @media (max-width: 600px) {
+        width: 280px;
+        height: 163px;
+      }
+
+      &.coupon1 {
+        background-image: url("../../assets/Coupons/coupon1.png");
+      }
+
+      &.coupon2 {
+        background-image: url("../../assets/Coupons/coupon2.png");
+      }
+
+      &.coupon3 {
+        background-image: url("../../assets/Coupons/coupon3.png");
+      }
+
+      &-text {
+        color: white;
+        position: absolute;
+        text-align: center;
+        top: 65px;
+        left: 40px;
+
+        @media (max-width: 600px) {
+          top: 45px;
+          left: 30px;
+        }
+      }
+    }
+  }
+}

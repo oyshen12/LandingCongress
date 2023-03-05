@@ -1,0 +1,40 @@
+.main-btn {
+  transition: all 0.3s ease-in-out;
+  border: 2px solid $mainColor !important;
+  border-radius: 5px;
+  padding: 0 15px !important;
+  color: $mainColor !important;
+  background-color: #FFFFFF !important;
+  font-weight: 700;
+
+  &:hover {
+    color: #FFFFFF !important;
+    background-color: $mainColor !important;
+  }
+
+  &.red {
+    background-color: #FE3D2E !important;
+    color: #FFFFFF !important;
+    border: 2px solid #FE3D2E !important;
+
+    &:hover {
+      background-color: #DB1B0C !important;
+      border: 2px solid #DB1B0C !important;
+    }
+  }
+
+  &.white {
+    background-color: transparent !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
+
+    &:hover {
+      background-color: #FFFFFF !important;
+      color: $mainColor !important;
+    }
+  }
+}
+.slim {
+  border: 1px !important;
+  font-weight: 400;
+}

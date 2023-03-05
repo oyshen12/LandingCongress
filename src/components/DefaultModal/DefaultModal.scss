@@ -1,0 +1,39 @@
+.modal {
+  background: white;
+  padding: 41px 56px;
+  position: relative;
+
+  @media(max-width: 600px) {
+    padding: 41px 16px;
+  }
+
+  &__title {
+    @media (max-width: 960px) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+    @media (max-width: 600px) {
+      font-size: 20px;
+      line-height: 23px;
+    }
+  }
+
+  &__text {
+    margin-top: 24px;
+  }
+
+  &__inputs {
+    margin-top: 24px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}

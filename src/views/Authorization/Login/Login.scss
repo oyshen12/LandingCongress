@@ -1,0 +1,62 @@
+.register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: fit-content;
+  margin: 0 auto;
+
+  @media (max-width: 600px) {
+    padding: 0 15px;
+  }
+
+  &__title {
+    font-size: 44px;
+    line-height: 48px;
+
+    @media (max-width: 600px) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  &__inputs {
+    margin-top: 50px;
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 960px) {
+      margin-top: 25px;
+    }
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+
+    &-input {
+      width: 100%;
+    }
+
+    &-form {
+      width: 100%;
+    }
+
+    &-error {
+      align-self: start;
+      color: red;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__checkbox {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  &__button {
+    margin-top: 15px;
+    width: 100%;
+  }
+}

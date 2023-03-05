@@ -1,0 +1,136 @@
+.footer {
+  width: 100%;
+  background: #2C2C2C;;
+  padding: 30px 0 21px 0;
+  color: white;
+
+  @media (max-width: 1264px) {
+    padding: 21px 0 15px 0;
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid white;
+    padding-bottom: 24px;
+
+    @media (max-width: 1264px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 960px) {
+      display: none;
+    }
+
+    &-960 {
+      display: none;
+
+      @media (max-width: 960px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 22px 0;
+        border-bottom: 1px solid white;
+        padding-bottom: 24px;
+      }
+      @media (max-width: 600px) {
+        display: none;
+      }
+    }
+
+    &-600 {
+      display: none;
+
+      @media (max-width: 600px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 1px solid white;
+        padding-bottom: 28px;
+      }
+    }
+
+    &.under {
+      grid-template-columns: 1fr;
+      margin-top: 8px;
+      padding-bottom: 0;
+      border: none;
+
+      @media (max-width: 1264px) {
+        grid-template-columns: 1fr 2fr;
+      }
+    }
+
+    &-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-right: 1px solid white;
+      min-height: 31px;
+
+      &:last-child {
+        border: none;
+      }
+
+      &-contacts {
+        max-width: 227px;
+        word-break: break-word;
+      }
+
+      &.documents {
+        text-align: center;
+
+        @media (max-width: 1264px) {
+          display: none;
+        }
+      }
+
+      &.documents-under {
+        display: none;
+
+        @media (max-width: 1264px) {
+          display: flex;
+        }
+      }
+
+      &.button {
+        @media (max-width: 1264px) {
+          border: none;
+        }
+      }
+
+      &.no-border {
+        border: none;
+      }
+    }
+
+    &-img {
+      background-image: url("/src/assets/Greetings/logo.png");
+      width: 64px;
+      height: 51px;
+      background-size: cover;
+
+      &-title {
+        max-width: 112px;
+        margin-left: 3px;
+        margin-top: auto;
+        font-size: 13px;
+
+        @media (max-width: 600px) {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  &__text {
+    text-align: center;
+
+    &.mobile {
+      display: none;
+
+      @media (max-width: 960px) {
+        display: block;
+        margin-top: 19px;
+      }
+    }
+  }
+}
