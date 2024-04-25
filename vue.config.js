@@ -13,7 +13,7 @@ module.exports = defineConfig({
       },
     },
   },
-  outputDir: "../server/frontend/web",
+  outputDir: "dist",
   configureWebpack: {
     resolve: {
       alias: {
