@@ -29,4 +29,5 @@ module.exports = defineConfig({
     compress: true,
     port: 9090,
   },
+  publicPath: "/landing-congress/",
 });
