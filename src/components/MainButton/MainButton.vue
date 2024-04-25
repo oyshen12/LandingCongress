@@ -48,12 +48,8 @@ export default Vue.extend({
   },
   computed: {
     colorButton(): string {
-      if (this.colorRed) {
-        return "main-btn red";
-      }
-      if (this.colorWhite) {
-        return "main-btn white";
-      }
+      if (this.colorRed) return "main-btn red";
+      if (this.colorWhite) return "main-btn white";
       return "main-btn";
     },
   },

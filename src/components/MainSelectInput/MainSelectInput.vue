@@ -22,9 +22,7 @@ import Vue from "vue";
 
 type rules = "required";
 type validateRulesField = (v: string, v2?: string) => string | boolean;
-type validateRules = {
-  [key in rules]: validateRulesField;
-};
+type validateRules = Record<rules, validateRulesField>;
 
 export default Vue.extend({
   name: "MainInput",

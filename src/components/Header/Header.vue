@@ -94,7 +94,7 @@
           </template>
           <v-list>
             <v-list-item
-              @click="FullLogout"
+              @click="fullLogout"
               class="header__wrapper-nav-user-exit pointer"
             >
               <div v-if="!logoutRequestLoading">Выход</div>
@@ -152,7 +152,7 @@ export default Vue.extend({
       this.mobileMenuOpened = false;
       this.smoothTo(id);
     },
-    FullLogout() {
+    fullLogout() {
       if (!this.logoutRequestLoading) {
         this.logoutRequestLoading = true;
         this.api

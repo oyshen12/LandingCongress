@@ -88,24 +88,15 @@ export default Vue.extend({
   },
   computed: {
     programList() {
-      const list = [];
-      for (let i = 1; i < 10; i++) {
-        list.push({
-          time: "09:00",
-          text:
-            "Заголовок. Ut enim ad minim veniam, quis nostrud exercitation \n" +
-            "ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          author: "Имя Фамилия",
-          place: "Место проведения, Конференц зал 1",
-          itSpeaker: false,
-        });
-      }
-      list[1].itSpeaker = true;
-      list[1].text =
-        "Тут будет тема / спикер, которые наберут наибольщее кол-во голосов";
-      list[5].itSpeaker = true;
-      list[5].text =
-        "Тут будет тема / спикер, которые наберут наибольщее кол-во голосов";
+      const list = Array(10).fill({
+        time: "09:00",
+        text:
+          "Заголовок. Ut enim ad minim veniam, quis nostrud exercitation \n" +
+          "ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        author: "Имя Фамилия",
+        place: "Место проведения, Конференц зал 1",
+        itSpeaker: false,
+      });
       return list;
     },
   },

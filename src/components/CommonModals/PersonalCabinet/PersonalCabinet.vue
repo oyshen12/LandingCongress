@@ -58,7 +58,6 @@ export default Vue.extend({
           password: "",
         };
         this.changeModalPersonalCabinet(emptyData);
-        console.log("authorization");
         this.formCabinet.resetValidation();
       }
     },

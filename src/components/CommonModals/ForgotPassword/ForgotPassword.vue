@@ -1,18 +1,18 @@
 <template>
-  <DefaultModal :modal="modal" @close="$emit('close')">
+  <DefaultModal :modal="modal" @close="$emit('close')" class="modal">
     <template #title>Восстановление пароля</template>
     <template #text
       >Для восстановления доступа на почту придет письмо с ссылкой
     </template>
     <template #additional>
-      <div class="forgot">
-        <div v-if="commonError" class="text24 red--text align-self-start mb-4">
+      <div class="modal__additional">
+        <div v-if="commonError" class="modal__additional-error text24">
           {{ commonError }}
         </div>
         <v-form
           @submit.prevent="restorePassword"
           ref="form"
-          class="forgot__input"
+          class="modal__additional-form"
         >
           <MainInput
             :value="email"
@@ -21,14 +21,14 @@
             :error="emailError !== ''"
             :error-message="emailError"
             label="Email"
-            class="forgot__input"
+            class="modal__additional-form-input"
             :rules="['required', 'email']"
           ></MainInput>
         </v-form>
         <MainButton
           @click="restorePassword"
           :loading="passwordRequestSending"
-          class="forgot__password"
+          class="modal__additional-form-recovery"
           >Восстановить пароль</MainButton
         >
       </div>
@@ -45,6 +45,7 @@ import { CustomAxiosError, inputValidate } from "@/types/types";
 
 export default Vue.extend({
   name: "ForgotPassword",
+  components: { DefaultModal, MainInput, MainButton },
   props: {
     modal: {
       type: Boolean,
@@ -59,7 +60,6 @@ export default Vue.extend({
       commonError: "",
     };
   },
-  components: { DefaultModal, MainInput, MainButton },
   computed: {
     form(): inputValidate {
       return this.$refs.form as inputValidate;
@@ -102,17 +102,27 @@ export default Vue.extend({
 </script>
 
 <style scoped lang="scss">
-.forgot {
+.modal__additional {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
 
-  &__password {
-    margin: 0 auto;
-  }
+.modal__additional-form {
+  width: 100%;
+}
 
-  &__input {
-    width: 100%;
-  }
+.modal__additional-form-input {
+  width: 100%;
+}
+
+.modal__additional-form-recovery {
+  margin: 0 auto;
+}
+
+.modal__additional-error {
+  color: #f44336;
+  align-self: self-start;
+  margin-bottom: 16px;
 }
 </style>

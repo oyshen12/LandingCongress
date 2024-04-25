@@ -18,7 +18,7 @@ export default Vue.extend({
       .post(
         process.env.VUE_APP_API_CONFIRM_EMAIL,
         {
-          id: +id,
+          id: Number(id),
           key,
         },
         {

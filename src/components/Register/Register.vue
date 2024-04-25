@@ -10,8 +10,8 @@
           <div class="dash"></div>
         </div>
         <div class="register__inputs">
-          <div v-if="this.inputErrors.common" class="text24 mb-3 red--text">
-            {{ this.inputErrors.common }}
+          <div v-if="inputErrors.common" class="text24 mb-3 red--text">
+            {{ inputErrors.common }}
           </div>
           <v-form ref="formInputs">
             <MainInput

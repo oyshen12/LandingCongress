@@ -297,7 +297,6 @@ export default Vue.extend({
     revealBonuses() {
       const valid = this.formInputs.validate();
       if (valid) {
-        console.log("revealBonuses");
         this.formInputs.resetValidation();
       }
     },

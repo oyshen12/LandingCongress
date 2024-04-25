@@ -234,7 +234,6 @@ export default Vue.extend({
         this.proposedSpeaker.name = "";
         this.proposedSpeaker.comment = "";
         this.formSpeaker.resetValidation();
-        console.log("sendSpeaker");
       }
     },
     sendTopic() {
@@ -244,7 +243,6 @@ export default Vue.extend({
         this.proposedTopic.name = "";
         this.proposedTopic.description = "";
         this.formTopic.resetValidation();
-        console.log("sendTopic");
       }
     },
     getReadableTime(time: number) {

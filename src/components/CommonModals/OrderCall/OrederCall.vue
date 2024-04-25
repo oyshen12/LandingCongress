@@ -56,7 +56,6 @@ export default Vue.extend({
           phone: "",
         };
         this.changeModalOrderCall(emptyData);
-        console.log("orderCall");
         this.formOrder.resetValidation();
       }
     },

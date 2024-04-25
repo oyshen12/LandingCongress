@@ -45,9 +45,7 @@ type rules =
   | "string"
   | "number";
 type validateRulesField = (v: string, v2?: string) => string | boolean;
-type validateRules = {
-  [key in rules]: validateRulesField;
-};
+type validateRules = Record<rules, validateRulesField>;
 
 export default Vue.extend({
   name: "MainInput",
@@ -160,7 +158,7 @@ export default Vue.extend({
           this.validateRules.passwords(
             this.passComparison[0],
             this.passComparison[1]
-          ) as any
+          ) as unknown as validateRulesField
         );
       }
 

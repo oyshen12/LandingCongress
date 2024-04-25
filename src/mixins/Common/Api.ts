@@ -30,7 +30,7 @@ api.interceptors.response.use(
     return config;
   },
   (error) => {
-    console.log("AppError: ", error);
+    console.error("AppError: ", error);
     /** Без обработки ошибок */
     const data = error.response.data;
     const errorValidation = data.name === "Errors of validation";
